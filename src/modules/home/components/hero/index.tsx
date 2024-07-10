@@ -10,16 +10,16 @@ const Hero = () => {
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Ecommerce Starter Template
+            Threads Realm
           </Heading>
           <Heading
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle font-normal"
           >
-            Powered by Medusa and Next.js
+            AI Powered Apparel
           </Heading>
         </span>
-        <a
+        {/* <a
           href="https://github.com/medusajs/nextjs-starter-medusa"
           target="_blank"
         >
@@ -27,7 +27,7 @@ const Hero = () => {
             View on GitHub
             <Github />
           </Button>
-        </a>
+        </a> */}
       </div>
     </div>
   )

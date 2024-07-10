@@ -60,6 +60,10 @@ async function getCountryCode(
 
     const urlCountryCode = request.nextUrl.pathname.split("/")[1]?.toLowerCase()
 
+    console.log("urlCountryCode", urlCountryCode)
+    console.log("vercelCountryCode", vercelCountryCode)
+    console.log("regionMap", regionMap)
+
     if (urlCountryCode && regionMap.has(urlCountryCode)) {
       countryCode = urlCountryCode
     } else if (vercelCountryCode && regionMap.has(vercelCountryCode)) {

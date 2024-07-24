@@ -4,6 +4,8 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Image from "next/image"
+import Logo from "/public/group.png"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -21,10 +23,16 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase h-full flex items-center gap-x-2"
               data-testid="nav-store-link"
             >
-              Threads Realm
+              Threads
+              <Image
+                src={Logo}
+                alt="Threads Realm Logo"
+                className="h-3/4 w-1/2 py-2"
+              />
+              Realm
             </LocalizedClientLink>
           </div>
 

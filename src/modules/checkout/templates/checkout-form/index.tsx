@@ -27,6 +27,8 @@ export default async function CheckoutForm() {
     return null
   }
 
+  console.log(cart)
+
   cart.checkout_step = cart && getCheckoutStep(cart)
 
   // get available shipping methods

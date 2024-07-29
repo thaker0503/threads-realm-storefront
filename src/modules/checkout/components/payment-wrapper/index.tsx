@@ -23,6 +23,7 @@ const Wrapper: React.FC<WrapperProps> = ({ cart, children }) => {
   const paymentSession = cart.payment_session as PaymentSession
 
   const isStripe = paymentSession?.provider_id?.includes("stripe")
+  const isRazorPay = paymentSession?.provider_id?.includes("razorpay")
 
   if (isStripe && paymentSession && stripePromise) {
     return (
@@ -57,7 +58,6 @@ const Wrapper: React.FC<WrapperProps> = ({ cart, children }) => {
     )
   }
 
-  console.log("======", paymentSession)
 
   return <div>{children}</div>
 }

@@ -57,6 +57,8 @@ const Wrapper: React.FC<WrapperProps> = ({ cart, children }) => {
     )
   }
 
+  console.log("======", paymentSession)
+
   return <div>{children}</div>
 }
 

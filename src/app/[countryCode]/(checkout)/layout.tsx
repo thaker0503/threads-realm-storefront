@@ -1,6 +1,10 @@
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
+import Image from "next/image"
+import Logo from "/public/group.png"
+import Footer from "@modules/layout/templates/footer"
+
 
 export default function CheckoutLayout({
   children,
@@ -24,20 +28,33 @@ export default function CheckoutLayout({
               Back
             </span>
           </LocalizedClientLink>
-          <LocalizedClientLink
+          {/* <LocalizedClientLink
             href="/"
             className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             data-testid="store-link"
           >
-            Medusa Store
-          </LocalizedClientLink>
+            Threads Realm
+          </LocalizedClientLink> */}
+          <div className="flex items-center h-full">
+            <LocalizedClientLink
+              href="/"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase h-full flex items-center gap-x-2"
+              data-testid="nav-store-link"
+            >
+              Threads
+              <Image
+                src={Logo}
+                alt="Threads Realm Logo"
+                className="h-3/4 w-1/2 py-2"
+              />
+              Realm
+            </LocalizedClientLink>
+          </div>
           <div className="flex-1 basis-0" />
         </nav>
       </div>
       <div className="relative" data-testid="checkout-container">{children}</div>
-      <div className="py-4 w-full flex items-center justify-center">
-        <MedusaCTA />
-      </div>
+      <Footer />
     </div>
   )
 }

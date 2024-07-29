@@ -11,7 +11,15 @@ const Hero = () => {
 
   const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true }
   const SLIDE_COUNT = 5
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+  const SLIDES = [{
+    image: '/1.png',
+  }, {
+    image: '/2.png',
+  }, {
+    image: '/1.png',
+  }, {
+    image: '/2.png',
+  }]
 
   return (
     // <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">

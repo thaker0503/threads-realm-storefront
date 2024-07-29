@@ -15,8 +15,12 @@ import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 
 const TWEEN_FACTOR_BASE = 0.2
 
+type SlideType = {
+    image: string
+}
+
 type PropType = {
-    slides: number[]
+    slides: SlideType[]
     options?: EmblaOptionsType
 }
 
@@ -105,13 +109,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    {slides.map((index) => (
+                    {slides.map((i,index) => (
                         <div className="embla__slide" key={index}>
                             <div className="embla__parallax">
                                 <div className="embla__parallax__layer">
                                     <img
                                         className="embla__slide__img embla__parallax__img"
-                                        src={`https://picsum.photos/1920/1080?v=${index}`}
+                                        src={`${i.image}`}
                                         alt=""
                                     />
                                 </div>

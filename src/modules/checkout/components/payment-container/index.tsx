@@ -21,7 +21,8 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
   paymentInfoMap,
   disabled = false,
 }) => {
-  const isDevelopment = process.env.NODE_ENV === "development"
+  // const isDevelopment = process.env.NODE_ENV === "development"
+  const isDevelopment = false
 
   return (
     <>
